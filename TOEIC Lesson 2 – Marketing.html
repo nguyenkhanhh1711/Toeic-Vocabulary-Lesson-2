@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="vi"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>TOEIC Lesson 2 – Marketing</title>
+<link href="https://fonts.googleapis.com/css2?family=Rock+Salt&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--card:rgba(255,248,235,.88);--ink:#5a2d12;--acc:#d9622b;--acc2:#f2a93b;--ok:#3f9b5a;--bad:#c8402e;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--card:rgba(52,26,14,.88);--ink:#ffe9d0}}
+:root[data-theme="dark"]{--card:rgba(52,26,14,.88);--ink:#ffe9d0}
+*{box-sizing:border-box}html,body{height:100%;margin:0}
+body{font-family:Quicksand,"Segoe UI",sans-serif;color:var(--ink);overflow:hidden;background:#b8501f;
+background:radial-gradient(circle at 15% 20%,#f6b24a 0,transparent 35%),radial-gradient(circle at 85% 30%,#e8742f 0,transparent 40%),radial-gradient(circle at 50% 90%,#f0a040 0,transparent 40%),linear-gradient(135deg,#b8501f,#d9742c 50%,#9c3d17)}
+.leaf{position:fixed;top:-60px;font-size:28px;opacity:.55;pointer-events:none;animation:fall linear infinite;z-index:0}
+@keyframes fall{to{transform:translateY(115vh) rotate(360deg)}}
+.track{display:flex;height:100%;transition:transform .6s cubic-bezier(.65,.05,.25,1);position:relative;z-index:1}
+.slide{flex:0 0 100%;height:100%;overflow-y:auto;padding:22px 16px 90px;display:flex;flex-direction:column;align-items:center}
+.in{width:100%;max-width:860px;animation:up .7s both}
+@keyframes up{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.card{background:var(--card);backdrop-filter:blur(6px);border-radius:22px;padding:18px 20px;box-shadow:0 8px 28px rgba(90,35,10,.25);margin-bottom:14px}
+h1,h2{margin:0 0 10px}h2{font-size:1.45rem;color:var(--acc)}
+.title{font-family:"Rock Salt",cursive;font-size:clamp(2rem,9vw,3.6rem);color:#fff;text-shadow:2px 3px 0 rgba(120,40,10,.5);margin:0}
+.cover{justify-content:center;text-align:center;color:#fff}
+.cover p{font-size:1rem;letter-spacing:.08em;text-shadow:0 1px 4px rgba(90,30,10,.6)}
+.cat{width:200px;animation:fl 3.5s ease-in-out infinite}@keyframes fl{50%{transform:translateY(-10px)}}
+.btn{background:linear-gradient(135deg,var(--acc2),var(--acc));color:#fff;border:0;border-radius:99px;padding:11px 24px;font:700 1rem Quicksand,sans-serif;cursor:pointer;box-shadow:0 4px 12px rgba(120,40,10,.35);transition:transform .2s}
+.btn:hover{transform:scale(1.06)}
+.en{font-size:1.12rem;line-height:1.7}.vi{opacity:.8;line-height:1.6;border-left:4px solid var(--acc2);padding-left:10px;margin-top:8px}
+mark{background:linear-gradient(transparent 55%,rgba(242,169,59,.7) 0);color:inherit;font-weight:700}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+.w{background:var(--card);border-radius:18px;padding:14px;box-shadow:0 6px 18px rgba(90,35,10,.2);animation:up .6s both;transition:transform .25s}
+.w:hover{transform:translateY(-4px) rotate(-.6deg)}
+.w b{font-size:1.25rem;color:var(--acc)}.pos{font-size:.75rem;background:var(--acc2);color:#fff;border-radius:8px;padding:1px 7px;margin-left:6px}
+.ipa{font-family:"Segoe UI",sans-serif;opacity:.7;margin:2px 0 6px}.fam{font-size:.85rem;margin-top:6px;opacity:.85}
+.bar{height:8px;border-radius:9px;background:rgba(120,60,20,.2);overflow:hidden;margin-bottom:12px}.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--acc2),var(--acc));transition:width .5s}
+.opt{display:block;width:100%;text-align:left;margin:8px 0;padding:12px 16px;border-radius:14px;border:2px solid rgba(217,98,43,.35);background:transparent;color:var(--ink);font:600 1rem Quicksand,sans-serif;cursor:pointer;transition:.2s}
+.opt:hover:not(:disabled){background:rgba(242,169,59,.25);transform:translateX(4px)}
+.opt.ok{background:var(--ok);border-color:var(--ok);color:#fff;animation:pop .4s}.opt.bad{background:var(--bad);border-color:var(--bad);color:#fff;animation:shake .4s}
+@keyframes pop{50%{transform:scale(1.04)}}@keyframes shake{25%{transform:translateX(-8px)}75%{transform:translateX(8px)}}
+.fb{display:none;margin-top:12px;padding:12px 14px;border-radius:14px;background:rgba(242,169,59,.25);animation:up .4s}
+.q{font-size:1.2rem;font-weight:700;margin:6px 0 10px}
+textarea{width:100%;border-radius:12px;border:2px solid rgba(217,98,43,.35);padding:8px;font:500 1rem Quicksand,sans-serif;background:transparent;color:var(--ink);resize:vertical}
+.ans{display:none;margin-top:8px;color:var(--ok);font-weight:700}.hint{font-size:.8rem;background:var(--acc2);color:#fff;border-radius:8px;padding:2px 8px}
+.nav{position:fixed;bottom:calc(14px + env(safe-area-inset-bottom,0px));left:0;right:0;display:flex;justify-content:center;align-items:center;gap:12px;z-index:5}
+.nav button{width:42px;height:42px;border-radius:50%;border:0;background:var(--card);color:var(--acc);font-size:1.2rem;font-weight:700;cursor:pointer;box-shadow:0 3px 10px rgba(90,35,10,.3)}
+.dots{display:flex;gap:7px}.dots i{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.5);transition:.3s}.dots i.on{background:#fff;width:24px;border-radius:9px}
+.big{font-size:3rem;font-weight:700;color:var(--acc);text-align:center}
+</style></head><body>
+<div class="track" id="tr"></div>
+<div class="nav"><button onclick="go(-1)">‹</button><div class="dots" id="dots"></div><button onclick="go(1)">›</button></div>
+<script>
+const W=[["market","v/n","/ˈmɑːrkɪt/","Tiếp thị, bán ra thị trường / Thị trường","marketing (n), marketable (adj)"],
+["attract","v","/əˈtrækt/","Thu hút, hấp dẫn","attraction (n), attractive (adj)"],
+["competition","n","/ˌkɑːmpəˈtɪʃn/","Sự cạnh tranh, cuộc thi đấu","compete (v), competitive (adj)"],
+["compare","v","/kəmˈper/","So sánh, đối chiếu","comparison (n), comparable (adj)"],
+["currently","adv","/ˈkɜːrəntli/","Hiện tại, hiện nay, lúc này","current (adj), currency (n)"],
+["consume","v","/kənˈsuːm/","Tiêu dùng, tiêu thụ","consumer (n), consumption (n)"],
+["fad","n","/fæd/","Mốt nhất thời, xu hướng ngắn hạn","faddish (adj)"],
+["inspiration","n","/ˌɪnspəˈreɪʃn/","Nguồn cảm hứng, sự truyền cảm hứng","inspire (v), inspirational (adj)"],
+["convince","v","/kənˈvɪns/","Thuyết phục (làm ai đó tin vào điều gì)","convincing (adj)"],
+["persuasion","n","/pərˈsweɪʒn/","Sự thuyết phục (kỹ năng, hành động)","persuade (v), persuasive (adj)"],
+["productive","adj","/prəˈdʌktɪv/","Năng suất, hiệu quả, sinh lợi","produce (v), product (n), production (n)"],
+["satisfaction","n","/ˌsætɪsˈfækʃn/","Sự hài lòng, sự thỏa mãn","satisfy (v), satisfactory (adj)"]];
+const P=[["Part 1: The Business Market","We want to market our new product. We must attract many customers. There is a lot of competition in this city. People always compare our price with other shops.","Chúng tôi muốn tiếp thị sản phẩm mới của mình. Chúng tôi phải thu hút nhiều khách hàng. Có rất nhiều sự cạnh tranh trong thành phố này. Mọi người luôn so sánh giá của chúng tôi với các cửa hàng khác.",0,4],
+["Part 2: Trends and Consumption","Currently, young people consume a lot of fast food. It is just a quick fad. Our chef needs a new inspiration to cook healthy meals.","Hiện tại, những người trẻ tuổi tiêu thụ rất nhiều thức ăn nhanh. Đó chỉ là một mốt nhất thời nhanh chóng. Đầu bếp của chúng tôi cần một nguồn cảm hứng mới để nấu những bữa ăn lành mạnh.",4,8],
+["Part 3: Persuasion and Success","We must convince them to buy our food. We use good persuasion in our ads. Our team is very productive today. We want to bring 100% satisfaction to everyone.","Chúng tôi phải thuyết phục họ mua thức ăn của chúng tôi. Chúng tôi sử dụng sự thuyết phục tốt trong các quảng cáo của mình. Đội ngũ của chúng tôi rất năng suất hôm nay. Chúng tôi muốn mang lại sự hài lòng 100% cho mọi người.",8,12]];
+const hl=s=>s.replace(/\b(market|attract|competition|compare|currently|consume|fad|inspiration|convince|persuasion|productive|satisfaction)\b/gi,"<mark>$1</mark>");
+// Quiz: [question ("m:word" = hỏi nghĩa), options, answerIndex, explanation]
+const Q=[["m:attract",["Phá vỡ","Thu hút, hấp dẫn","Cạnh tranh","Tiêu thụ"],1,"attract = thu hút. Họ từ: attraction, attractive."],
+["m:compare",["Mua bán","Hài lòng","So sánh","Thuyết phục"],2,"compare = so sánh, đối chiếu. Họ từ: comparison, comparable."],
+["m:competition",["Sự thuyết phục","Sự cạnh tranh, cuộc thi","Sự tiêu thụ","Mốt nhất thời"],1,"competition = sự cạnh tranh, cuộc thi đấu. Động từ: compete."],
+["m:consume",["Tiêu thụ, tiêu dùng","Đóng góp","Năng suất","Tiếp thị"],0,"consume = tiêu dùng, tiêu thụ. Họ từ: consumer, consumption."],
+["m:convince",["Thuyết phục","Thu hút","Cạnh tranh","Bỏ cuộc"],0,"convince = thuyết phục (làm ai đó tin vào điều gì)."],
+["m:currently",["Trong tương lai","Một cách nhanh chóng","Gần đây","Hiện tại, hiện nay"],3,"currently (adv) = hiện tại, hiện nay. Gốc: current (adj)."],
+["m:fad",["Truyền thống","Mốt nhất thời","Nguồn cảm hứng","Sự hài lòng"],1,"fad = mốt nhất thời, xu hướng ngắn hạn."],
+["We need a new ______ for the marketing campaign.",["consume","inspiration","currently","compare"],1,"Sau 'a new' cần danh từ. inspiration (nguồn cảm hứng) hợp nghĩa: cần nguồn cảm hứng mới cho chiến dịch."],
+["The company wants to ______ its new products to teenagers.",["market","fad","satisfaction","productive"],0,"Sau 'to' cần động từ. market (v) = tiếp thị sản phẩm đến thanh thiếu niên."],
+["It takes a lot of ______ to make him change his mind.",["consume","attract","persuasion","currently"],2,"'a lot of' + danh từ. persuasion = sự thuyết phục: cần nhiều sự thuyết phục để anh ấy đổi ý."],
+["m:productive",["Lười biếng","Năng suất, hiệu quả","Đắt tiền","Tạm thời"],1,"productive (adj) = năng suất, hiệu quả, sinh lợi."],
+["m:satisfaction",["Sự hài lòng","Nỗi buồn","Sự cạnh tranh","Lời phàn nàn"],0,"satisfaction = sự hài lòng, thỏa mãn. Động từ: satisfy."],
+["Beautiful packaging will ______ more customers.",["attract","consume","fad","productive"],0,"Sau 'will' cần động từ nguyên mẫu. attract = thu hút: bao bì đẹp thu hút khách."],
+["Please ______ the prices before you buy the phone.",["satisfy","compare","market","inspire"],1,"compare the prices = so sánh giá trước khi mua."],
+["The ______ in the smartphone market is very high.",["competition","convince","currently","persuasion"],0,"Sau 'The' cần danh từ làm chủ ngữ: competition = sự cạnh tranh."],
+["These big machines ______ a lot of electricity.",["attract","market","consume","compare"],2,"consume electricity = tiêu thụ điện. Máy lớn tiêu thụ nhiều điện."],
+["Chọn từ đúng: I tried to ______ my boss to give me a raise.",["fad","convince","productive","competition"],1,"convince someone to do something = thuyết phục ai làm gì."],
+["______, we have 50 employees in the office.",["Inspiration","Persuasion","Satisfaction","Currently"],3,"Currently đứng đầu câu (trạng từ) = Hiện tại, chúng tôi có 50 nhân viên."],
+["That dance was just a ______, nobody does it anymore.",["fad","market","consume","productive"],0,"fad = mốt nhất thời. 'nobody does it anymore' gợi ý đã hết thịnh hành."],
+["Our team was very ______ and finished the project early.",["attract","compare","productive","currently"],2,"'was very' + tính từ. productive = năng suất, nên hoàn thành dự án sớm."]];
+const T=[["Cửa hàng thu hút nhiều người.","attract","The store attracts many people."],["Tôi so sánh hai chiếc điện thoại.","compare","I compare the two phones."],["Sự cạnh tranh rất khốc liệt.","competition – high","The competition is very high."],["Họ tiêu thụ nhiều nước.","consume","They consume a lot of water."],["Anh ấy thuyết phục tôi mua nó.","convince","He convinces me to buy it. (hoặc: convinced)"],["Hiện tại, cô ấy đang làm việc.","currently","Currently, she is working."],["Trò chơi này là một mốt nhất thời.","fad","This game is a fad."],["Âm nhạc là nguồn cảm hứng của tôi.","inspiration","Music is my inspiration."],["Chúng tôi tiếp thị sản phẩm tốt.","market – động từ","We market the product well."],["Anh ấy có kỹ năng thuyết phục tốt.","persuasion","He has good persuasion skills."],["Họ rất năng suất hôm nay.","productive","They are very productive today."],["Sự hài lòng của bạn là quan trọng.","satisfaction","Your satisfaction is important."]];
+// Sound (chỉ khi chọn đúng / sai)
+let AC;function tone(f,t,d,type,v=.18){AC=AC||new (window.AudioContext||window.webkitAudioContext)();const o=AC.createOscillator(),g=AC.createGain();o.type=type;o.frequency.setValueAtTime(f,AC.currentTime+t);g.gain.setValueAtTime(v,AC.currentTime+t);g.gain.exponentialRampToValueAtTime(.001,AC.currentTime+t+d);o.connect(g).connect(AC.destination);o.start(AC.currentTime+t);o.stop(AC.currentTime+t+d)}
+const good=()=>{try{tone(660,0,.15,"sine");tone(880,.12,.15,"sine");tone(1175,.24,.3,"sine")}catch(e){}};
+const bad=()=>{try{tone(200,0,.2,"sawtooth",.12);tone(130,.18,.35,"sawtooth",.12)}catch(e){}};
+// Build slides
+const cat=`<svg class="cat" viewBox="0 0 200 170"><defs><filter id="f"><feTurbulence baseFrequency=".06" numOctaves="2" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="9"/></filter></defs><g filter="url(#f)" fill="#fff"><circle cx="60" cy="40" r="17"/><circle cx="140" cy="40" r="17"/><ellipse cx="100" cy="85" rx="72" ry="52"/><ellipse cx="100" cy="140" rx="40" ry="22"/></g><circle cx="76" cy="85" r="5" fill="#5a2d12"/><circle cx="124" cy="85" r="5" fill="#5a2d12"/><path d="M94 96q6 5 12 0" stroke="#5a2d12" stroke-width="3" fill="none" stroke-linecap="round"/></svg>`;
+const S=[`<div class="slide cover"><div class="in">${cat}<h1 class="title">MARKETING</h1><p>TOEIC 600 ESSENTIAL WORDS · LESSON 2</p><p>12 từ vựng · 20 câu trắc nghiệm · 12 câu dịch<br>Vuốt hoặc bấm ›, phím ← → để chuyển trang</p><button class="btn" onclick="go(1)">Bắt đầu 🍁</button></div></div>`];
+P.forEach(p=>S.push(`<div class="slide"><div class="in"><h2>🍂 ${p[0]}</h2><div class="card"><div class="en">${hl(p[1])}</div><div class="vi">${p[2]}</div></div><div class="grid">${W.slice(p[3],p[4]).map((w,i)=>`<div class="w" style="animation-delay:${i*.12}s"><b>${w[0]}</b><span class="pos">${w[1]}</span><div class="ipa">${w[2]}</div><div>${w[3]}</div><div class="fam">🌿 ${w[4]}</div></div>`).join("")}</div></div></div>`));
+S.push(`<div class="slide"><div class="in"><h2>🍁 Bài tập trắc nghiệm</h2><div class="bar"><i id="pb"></i></div><div class="card" id="qa"></div></div></div>`);
+S.push(`<div class="slide"><div class="in"><h2>✍️ Dịch câu (Writing)</h2><div class="card">Dịch sang tiếng Anh bằng từ gợi ý, rồi bấm xem đáp án gợi ý.</div>${T.map((t,i)=>`<div class="card"><b>${i+1}. ${t[0]}</b> <span class="hint">${t[1]}</span><textarea rows="2" placeholder="Viết câu của bạn..."></textarea><button class="btn" style="margin-top:8px;padding:7px 18px" onclick="this.nextElementSibling.style.display='block';this.style.display='none'">Xem đáp án</button><div class="ans">✅ ${t[2]}</div></div>`).join("")}</div></div>`);
+document.getElementById("tr").innerHTML=S.join("");
+document.getElementById("dots").innerHTML=S.map(()=>"<i></i>").join("");
+// Navigation
+let cur=0;function go(d){cur=Math.max(0,Math.min(S.length-1,cur+d));tr.style.transform=`translateX(-${cur*100}%)`;document.querySelectorAll(".dots i").forEach((e,i)=>e.classList.toggle("on",i==cur));document.querySelectorAll(".slide")[cur].querySelectorAll(".in,.w").forEach(e=>{e.style.animation="none";e.offsetHeight;e.style.animation=""})}
+go(0);
+addEventListener("keydown",e=>{if(e.target.tagName=="TEXTAREA")return;if(e.key=="ArrowRight")go(1);if(e.key=="ArrowLeft")go(-1)});
+let sx,sy;addEventListener("touchstart",e=>{sx=e.touches[0].clientX;sy=e.touches[0].clientY},{passive:true});
+addEventListener("touchend",e=>{const dx=e.changedTouches[0].clientX-sx,dy=e.changedTouches[0].clientY-sy;if(Math.abs(dx)>60&&Math.abs(dx)>Math.abs(dy)*1.5)go(dx<0?1:-1)});
+// Quiz logic
+let qi=0,sc=0;
+function rq(){const q=Q[qi],qa=document.getElementById("qa");pb.style.width=(qi/Q.length*100)+"%";
+const txt=q[0].startsWith("m:")?`Từ "<span style="color:var(--acc)">${q[0].slice(2)}</span>" có nghĩa nào sau đây?`:q[0];
+qa.innerHTML=`<small>Câu ${qi+1}/${Q.length} · Điểm: ${sc}</small><div class="q">${txt}</div>${q[1].map((o,i)=>`<button class="opt" onclick="pick(${i})">${"ABCD"[i]}. ${o}</button>`).join("")}<div class="fb" id="fb"></div>`}
+function pick(i){const q=Q[qi],b=document.querySelectorAll(".opt");b.forEach((x,j)=>{x.disabled=true;if(j==q[2])x.classList.add("ok")});
+const ok=i==q[2];if(ok){sc++;good()}else{b[i].classList.add("bad");bad()}
+const f=document.getElementById("fb");f.style.display="block";
+f.innerHTML=`<b>${ok?"🎉 Chính xác!":"😿 Chưa đúng. Đáp án: "+"ABCD"[q[2]]+". "+q[1][q[2]]}</b><p style="margin:6px 0 10px">${q[3]}</p><button class="btn" onclick="nq()">${qi==Q.length-1?"Xem kết quả":"Câu tiếp ›"}</button>`}
+function nq(){qi++;if(qi<Q.length)rq();else{pb.style.width="100%";const m=sc>=18?"Xuất sắc! 🌟":sc>=14?"Rất tốt! 🍁":sc>=10?"Khá ổn, ôn thêm nhé 🍂":"Cố lên, xem lại bài học nhé 🐱";qa.innerHTML=`<div class="big">${sc} / ${Q.length}</div><p style="text-align:center;font-size:1.2rem">${m}</p><div style="text-align:center"><button class="btn" onclick="qi=0;sc=0;rq()">Làm lại</button> <button class="btn" onclick="go(1)">Sang phần dịch ›</button></div>`}}
+rq();
+// Falling leaves
+for(let i=0;i<14;i++){const l=document.createElement("div");l.className="leaf";l.textContent=["🍁","🍂"][i%2];l.style.left=Math.random()*100+"vw";l.style.animationDuration=(9+Math.random()*10)+"s";l.style.animationDelay=(-Math.random()*15)+"s";l.style.fontSize=(18+Math.random()*20)+"px";document.body.appendChild(l)}
+</script></body></html>
